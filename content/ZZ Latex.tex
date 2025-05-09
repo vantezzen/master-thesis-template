@@ -1,0 +1,85 @@
+% Basic formatting
+\section{Dies ist eine Überschrift}
+\subsection{Dies ist eine Unterüberschrift}
+\subsubsection{Dies ist eine Unterunterüberschrift}
+\paragraph{Dies ist eine Paragraphenüberschrift}
+Dies ist ein normaler Text
+\textbf{Dies ist fetter Text}
+\textit{Dies ist kursiver Text}
+\textmono{Dies ist ein monospaced Text}
+\medskip
+Dieser Text hat ein wenig Abstand zum nächsten Text.
+\bigskip
+Dieser Text hat mehr Abstand zum nächsten Text.
+
+% Link
+\url{https://www.example.com}
+
+% Citation
+\textcite{citation_key} described that...
+Some text that needs citation \parencite{citation_key}.
+
+% Listing (Code)
+% Keep the language always set to PHP - that seems to work best for all C-style languages (TypeScript, C, etc.)
+\begin{lstlisting}[frame=htrbl, caption={Caption Here}, label={lst:my listing}, language=php]
+class SomeCode extends SomeClass {
+    function myFunc() {}
+}
+\end{lstlisting}
+
+Listing \ref{lst:my listing} zeigt...
+
+% Image
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{abb/picture.png}
+\centering
+\caption{Beschreibung \parencite{citation_key}}
+\label{fig:my fig}
+\end{figure}
+
+Abbildung \ref{fig:my fig} zeigt...
+Optional mit Seitenangabe: Abbildung \ref{fig:my fig} [S.\pageref{fig:my fig}] zeigt...
+
+
+% Tabelle 
+\begin{center}
+    \begin{tabular}{ | l | c | }
+      \hline
+      Überschrift 1 & Überschrift 2 \\ \hline \hline
+      Info 1 & Info 2 \\ \hline
+      Info 3 & Info 4 \\ \hline
+      \hline
+      \multicolumn{2}{|c|}{Info in einer Zelle} \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+% Formeln
+Einfache Formel:
+\begin{equation}
+    \mathbf{v}_{forward} = R_{\text{cam}} \cdot (0, 0, -1)
+\end{equation}
+
+% Formel mit mehreren Zeilen, zentriert
+\begin{equation}
+    \begin{aligned}
+    & \mathbf{position} = \\
+    &    \mathbf{aktuelle position} + \\
+    &    \mathbf{v}_{forward} \times \mathbf{touch delta}_{up/down} + \\
+    &    \mathbf{v}_{right} \times \mathbf{touch delta}_{left/right}
+    \end{aligned}
+\end{equation}
+
+% Große Matrix
+\begin{align*}
+    R = \begin{bmatrix} 
+        c_\alpha c_\gamma - s_\alpha s_\beta s_\gamma & -c_\beta s_\alpha & c_\alpha s_\gamma + c_\gamma s_\alpha s_\beta \\
+        c_\gamma s_\alpha + c_\alpha s_\beta s_\gamma & c_\alpha c_\beta & s_\alpha s_\gamma - c_\alpha c_\gamma s_\beta \\
+        -c_\beta s_\gamma & s_\beta & c_\beta c_\gamma
+    \end{bmatrix}
+\end{align*}
+
+% Einfache Formel mit Text
+\[
+x = x_{user} + \textit{Distanz} \cdot \cos(\text{Virtuelle Peilung})
+\]
