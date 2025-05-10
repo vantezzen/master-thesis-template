@@ -42,17 +42,19 @@ Optional mit Seitenangabe: Abbildung \ref{fig:my fig} [S.\pageref{fig:my fig}] z
 
 
 % Tabelle 
+\begin{table}[!h]
 \begin{center}
-    \begin{tabular}{ | l | c | }
+    \begin{tabular}{ | l | c | c | c | }
       \hline
-      Überschrift 1 & Überschrift 2 \\ \hline \hline
-      Info 1 & Info 2 \\ \hline
-      Info 3 & Info 4 \\ \hline
-      \hline
-      \multicolumn{2}{|c|}{Info in einer Zelle} \\
-      \hline
+      Regel & Parameter 1 & Parameter 2 & Parameter n \\ \hline \hline
+      Hauptregel & Kran & Gebäude & ... \\ \hline
     \end{tabular}
-  \end{center}
+\caption{Tabularische Regel nach \textcite{citation_key}}
+\label{tab:my table}
+\end{center}
+\end{table}
+
+Tabelle \ref{tab:my table} zeigt
 
 % Formeln
 Einfache Formel:
